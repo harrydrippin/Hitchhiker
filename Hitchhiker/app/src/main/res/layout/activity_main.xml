@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.nhn.android.maps.NMapView
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:id="@+id/mapView"/>
+
+    <android.support.v7.widget.Toolbar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:titleTextColor="#fff"
+        android:id="@+id/toolbar"
+        android:background="@drawable/radius"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_margin="30px">
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="450px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginBottom="0px"
+        android:background="@drawable/radius"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/main_relative">
+        <RelativeLayout
+            android:layout_width="690dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:id="@+id/button_solo"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/img_solo"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/solo"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="690dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:id="@+id/layout_and"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/text_alert"
+                    android:text="선택해주세요!"
+                    android:textColor="#CCCCCC"
+                    android:textSize="13sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="학교 가기"
+                    android:textSize="22sp"/>
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="9dp"
+                    android:layout_marginTop="10px"
+                    android:src="@drawable/person_three"
+                    android:id="@+id/img_person" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="690dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="450px"
+            android:id="@+id/button_multi"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/img_multi"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/multi"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
