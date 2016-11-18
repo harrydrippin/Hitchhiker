@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+    </head>
+    <body>
+        email: <input id="in_email" value="hongkd@gmail.com"/> <br/>
+        pswd: <input id="in_password" value="1234"/>
+        <input id="sign_in" type="button" onclick="in_click();" value="sign in"></button>
+        <br/>
+        email: <input id="up_email" value="kcs1000@gmail.com"/> <br/>
+        pswd: <input id="up_password" value="1234"/>
+        <input id="sign_up" type="button" onclick="up_click();" value="sign up"></button>
+        <script>
+            var socket = io.connect('http://localhost:8080');
+
+            function up_click() {
+                socket.emit('sign_up', {name: "kcs", gender: true, univ: "", email: document.getElementById('up_email').value, password: document.getElementById('up_password').value});
+            }
+
+            function in_click() {
+                socket.emit('sign_in', {email: document.getElementById('in_email').value, password: document.getElementById('in_password').value});
+            }
+
+            socket.on('sign_up_success', function(data){    
+                alert('success');
+            });
+
+            socket.on('sign_up_fail', function(){
+                alert('fail');
+            });
+
+            socket.on('sign_in_success', function(data){
+                alert('success');
+            });
+
+            socket.on('sign_in_fail', function(){
+                alert('fail');
+            });
+            
+        </script>
+    </body>
+</html>
